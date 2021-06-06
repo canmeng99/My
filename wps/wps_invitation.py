@@ -772,7 +772,7 @@ def wps_massing(*args):
     desp = sio.getvalue()
     digest = dio.getvalue()
 
-#    sendNotify.send(title=digest, msg=desp)
+    sendNotify.send(title=digest, msg=desp)
     print(desp)
     return desp
 
