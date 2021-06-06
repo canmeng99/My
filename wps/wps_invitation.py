@@ -41,12 +41,12 @@ else:
 if os.environ['Orc_Id'] != "":
     client_id = os.environ['Orc_Id']
 else:
-    client_id = '*********复制百度文字OCR应用的API Key进来*************(保留引号)'
+    client_id = 'CTNE0uUCVSZXiHBoGrkM79e3'
 
 if os.environ['Orc_Secret'] != "":
     client_secret = os.environ['Orc_Secret']
 else:
-    client_secret = '*********复制百度文字OCR应用的Secret Key进来*************(保留引号)'
+    client_secret = 'ANUrzDTH4Byqv83LpQ3O8HbBKTKc4poR'
 
 bdocr_loss = 0.95  # 微信积分签到验证时认为文字未倒置的置信度, 默认不修改
 jifen_limit = 5  # WPS积分签到尝试次数，建议值为3-6，每次尝试最多会调用10次百度OCR接口，每人每天有500次高精度识别免费额度
