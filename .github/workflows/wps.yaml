@@ -27,3 +27,4 @@ jobs:
         run: python3 wps/wps_invitation.py
         env:
           WPS_KEY: ${{ secrets.WPS_KEY }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
