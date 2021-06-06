@@ -9,6 +9,7 @@ from io import StringIO
 import cv2  # 图像处理模块
 import numpy as np
 import pytz
+import os
 
 sys.path.append("My/wps")
 #from sendNotify import *
