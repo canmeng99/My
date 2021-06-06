@@ -10,8 +10,8 @@ import cv2  # 图像处理模块
 import numpy as np
 import pytz
 
-sys.path.append("My-Actions/function/wps")
-from sendNotify import *
+sys.path.append("My/wps")
+#from sendNotify import *
 
 # Python版本 3.6, 该脚本仅供分享交流和学习, 不允许用于任何非法途径, 否则后果自负, 作者对此不承担任何责任
 # 20210417更新: 添加WPS积分签到功能(个人使用强烈建议根据个人情况修改第28、42行);
@@ -27,7 +27,7 @@ from sendNotify import *
 
 # 初始化信息
 Wps_id = ''
-sendNotify = sendNotify()
+#sendNotify = sendNotify()
 scf_environment = 0  # 本地环境运行选择0，scf云函数环境运行选择1
 
 if os.environ['WPS_KEY'] != "":
@@ -772,7 +772,7 @@ def wps_massing(*args):
     desp = sio.getvalue()
     digest = dio.getvalue()
 
-    sendNotify.send(title=digest, msg=desp)
+#    sendNotify.send(title=digest, msg=desp)
     print(desp)
     return desp
 
@@ -888,7 +888,7 @@ def main():
                 digest = dio.getvalue()
                 if digest[-2:] == '\n\n':
                     digest = digest[0:-2]
-                sendNotify.send(title=digest, msg=desp)
+#                sendNotify.send(title=digest, msg=desp)
                 print(desp)
                 return desp
         b0 = wps_webpage_clockin(item['sid'], headers)
@@ -911,7 +911,7 @@ def main():
             digest = dio.getvalue()
             if digest[-2:] == '\n\n':
                 digest = digest[0:-2]
-            sendNotify.send(title=digest, msg=desp)
+#            sendNotify.send(title=digest, msg=desp)
             # print(desp)
             # return desp
         b1 = docer_webpage_clockin(headers)
@@ -990,7 +990,7 @@ def main():
 
     desp = sio.getvalue()
     digest = dio.getvalue()
-    sendNotify.send(title=digest, msg=desp)
+#    sendNotify.send(title=digest, msg=desp)
     print(desp)
 
 
