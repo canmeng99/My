@@ -3,3 +3,6 @@ pycryptodome
 pytz
 numpy
 opencv-python
+rsa
+python-dateutil
+chardet
